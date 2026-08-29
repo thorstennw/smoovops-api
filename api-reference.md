@@ -3,23 +3,21 @@
 Mirrored from [smoovops.com/doc/api-reference](https://smoovops.com/doc/api-reference) — see
 this repository's [README](README.md) for the Postman collection that goes with it.
 
-This page lists every endpoint available to a
-[Personal API Token](https://smoovops.com/doc/api-access) — auto-generated from the backend's
-route definitions, so it always matches what's actually deployed. Every request must carry
-both required headers:
+This page lists every endpoint available to a [Personal API Token](https://smoovops.com/doc/api-access) —
+auto-generated from the backend's route definitions, so it always matches what's actually
+deployed. Every request must carry both required headers:
 
 ```
 Authorization: Bearer smv_live_...
 x-api-key: <your API key>
 ```
 
-See [API Access](https://smoovops.com/doc/api-access) for how to generate a token, and for
-rate limits and quotas.
+See [API Access](https://smoovops.com/doc/api-access) for how to generate a token, and for rate limits and
+quotas.
 
 **Response bodies are not yet documented here** — every endpoint below shows the request
 shape (if any); the shape of a successful response isn't part of this generated reference
-yet. A [standalone PDF](https://smoovops.com/smoovops-api-reference-en.pdf) of this page is
-also available.
+yet. A [standalone PDF](https://smoovops.com/smoovops-api-reference-en.pdf) of this page is also available.
 
 
 ## API Tokens
@@ -372,6 +370,8 @@ _No request body._
 | `netAmount` | number | No |
 | `taxAmount` | number | No |
 | `totalAmount` | number | No |
+| `currency` | string | No |
+| `dueDate` | string | No |
 | `fileId` | string | No |
 | `fileType` | string | No |
 
@@ -396,6 +396,8 @@ _No request body._
 | `netAmount` | number | No |
 | `taxAmount` | number | No |
 | `totalAmount` | number | No |
+| `currency` | string | No |
+| `dueDate` | string | No |
 | `fileId` | string | No |
 | `fileType` | string | No |
 
@@ -425,10 +427,16 @@ _No request body._
 | `netAmount` | number | No |
 | `taxAmount` | number | No |
 | `totalAmount` | number | No |
+| `currency` | string | No |
+| `dueDate` | string | No |
 | `fileId` | string | No |
 | `fileType` | string | No |
 
 ### DELETE `/v1/documents/{documentId}`
+
+_No request body._
+
+### POST `/v1/documents/{documentId}/generate-einvoice`
 
 _No request body._
 
@@ -748,6 +756,7 @@ _No request body._
 | `name` | string | Yes |
 | `rate` | number | Yes |
 | `isDefault` | boolean | No |
+| `vatCategoryCode` | string | No |
 
 ### PATCH `/v1/tax-rates/{taxRateId}`
 
@@ -757,6 +766,7 @@ _No request body._
 | `name` | string | No |
 | `rate` | number | No |
 | `isDefault` | boolean | No |
+| `vatCategoryCode` | string | No |
 
 ### DELETE `/v1/tax-rates/{taxRateId}`
 

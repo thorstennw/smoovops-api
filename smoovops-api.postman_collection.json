@@ -1221,7 +1221,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"documentType\": \"CONTRACT\",\n  \"name\": \"\",\n  \"documentNumber\": \"\",\n  \"contractId\": \"\",\n  \"contractName\": \"\",\n  \"partnerId\": \"\",\n  \"partnerName\": \"\",\n  \"creationDate\": \"\",\n  \"status\": \"DRAFT\",\n  \"source\": \"UPLOADED\",\n  \"templateId\": \"\",\n  \"sourceDocumentId\": \"\",\n  \"lineItems\": [\n    {\n      \"productId\": \"\",\n      \"name\": \"\",\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"taxRatePercent\": 0\n    }\n  ],\n  \"taxBreakdown\": [\n    {\n      \"taxRatePercent\": 0,\n      \"netAmount\": 0,\n      \"taxAmount\": 0\n    }\n  ],\n  \"netAmount\": 0,\n  \"taxAmount\": 0,\n  \"totalAmount\": 0,\n  \"fileId\": \"\",\n  \"fileType\": \"\"\n}",
+              "raw": "{\n  \"documentType\": \"CONTRACT\",\n  \"name\": \"\",\n  \"documentNumber\": \"\",\n  \"contractId\": \"\",\n  \"contractName\": \"\",\n  \"partnerId\": \"\",\n  \"partnerName\": \"\",\n  \"creationDate\": \"\",\n  \"status\": \"DRAFT\",\n  \"source\": \"UPLOADED\",\n  \"templateId\": \"\",\n  \"sourceDocumentId\": \"\",\n  \"lineItems\": [\n    {\n      \"productId\": \"\",\n      \"name\": \"\",\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"taxRatePercent\": 0,\n      \"vatCategoryCode\": \"\",\n      \"unitCode\": \"C62\"\n    }\n  ],\n  \"taxBreakdown\": [\n    {\n      \"taxRatePercent\": 0,\n      \"netAmount\": 0,\n      \"taxAmount\": 0\n    }\n  ],\n  \"netAmount\": 0,\n  \"taxAmount\": 0,\n  \"totalAmount\": 0,\n  \"currency\": \"\",\n  \"dueDate\": \"\",\n  \"fileId\": \"\",\n  \"fileType\": \"\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1260,7 +1260,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"documentType\": \"CONTRACT\",\n  \"name\": \"\",\n  \"documentNumber\": \"\",\n  \"contractId\": \"\",\n  \"contractName\": \"\",\n  \"partnerId\": \"\",\n  \"partnerName\": \"\",\n  \"creationDate\": \"\",\n  \"status\": \"DRAFT\",\n  \"source\": \"UPLOADED\",\n  \"templateId\": \"\",\n  \"sourceDocumentId\": \"\",\n  \"lineItems\": [\n    {\n      \"productId\": \"\",\n      \"name\": \"\",\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"taxRatePercent\": 0\n    }\n  ],\n  \"taxBreakdown\": [\n    {\n      \"taxRatePercent\": 0,\n      \"netAmount\": 0,\n      \"taxAmount\": 0\n    }\n  ],\n  \"netAmount\": 0,\n  \"taxAmount\": 0,\n  \"totalAmount\": 0,\n  \"fileId\": \"\",\n  \"fileType\": \"\"\n}",
+              "raw": "{\n  \"documentType\": \"CONTRACT\",\n  \"name\": \"\",\n  \"documentNumber\": \"\",\n  \"contractId\": \"\",\n  \"contractName\": \"\",\n  \"partnerId\": \"\",\n  \"partnerName\": \"\",\n  \"creationDate\": \"\",\n  \"status\": \"DRAFT\",\n  \"source\": \"UPLOADED\",\n  \"templateId\": \"\",\n  \"sourceDocumentId\": \"\",\n  \"lineItems\": [\n    {\n      \"productId\": \"\",\n      \"name\": \"\",\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"taxRatePercent\": 0,\n      \"vatCategoryCode\": \"\",\n      \"unitCode\": \"C62\"\n    }\n  ],\n  \"taxBreakdown\": [\n    {\n      \"taxRatePercent\": 0,\n      \"netAmount\": 0,\n      \"taxAmount\": 0\n    }\n  ],\n  \"netAmount\": 0,\n  \"taxAmount\": 0,\n  \"totalAmount\": 0,\n  \"currency\": \"\",\n  \"dueDate\": \"\",\n  \"fileId\": \"\",\n  \"fileType\": \"\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1324,7 +1324,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"version\": 0,\n  \"documentType\": \"CONTRACT\",\n  \"name\": \"\",\n  \"documentNumber\": \"\",\n  \"contractId\": \"\",\n  \"contractName\": \"\",\n  \"partnerId\": \"\",\n  \"partnerName\": \"\",\n  \"creationDate\": \"\",\n  \"status\": \"DRAFT\",\n  \"source\": \"GENERATED\",\n  \"templateId\": \"\",\n  \"sourceDocumentId\": \"\",\n  \"lineItems\": [\n    {\n      \"productId\": \"\",\n      \"name\": \"\",\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"taxRatePercent\": 0\n    }\n  ],\n  \"taxBreakdown\": [\n    {\n      \"taxRatePercent\": 0,\n      \"netAmount\": 0,\n      \"taxAmount\": 0\n    }\n  ],\n  \"netAmount\": 0,\n  \"taxAmount\": 0,\n  \"totalAmount\": 0,\n  \"fileId\": \"\",\n  \"fileType\": \"\"\n}",
+              "raw": "{\n  \"version\": 0,\n  \"documentType\": \"CONTRACT\",\n  \"name\": \"\",\n  \"documentNumber\": \"\",\n  \"contractId\": \"\",\n  \"contractName\": \"\",\n  \"partnerId\": \"\",\n  \"partnerName\": \"\",\n  \"creationDate\": \"\",\n  \"status\": \"DRAFT\",\n  \"source\": \"GENERATED\",\n  \"templateId\": \"\",\n  \"sourceDocumentId\": \"\",\n  \"lineItems\": [\n    {\n      \"productId\": \"\",\n      \"name\": \"\",\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"taxRatePercent\": 0,\n      \"vatCategoryCode\": \"\",\n      \"unitCode\": \"C62\"\n    }\n  ],\n  \"taxBreakdown\": [\n    {\n      \"taxRatePercent\": 0,\n      \"netAmount\": 0,\n      \"taxAmount\": 0\n    }\n  ],\n  \"netAmount\": 0,\n  \"taxAmount\": 0,\n  \"totalAmount\": 0,\n  \"currency\": \"\",\n  \"dueDate\": \"\",\n  \"fileId\": \"\",\n  \"fileType\": \"\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1354,6 +1354,32 @@
                 "v1",
                 "documents",
                 "{{documentId}}"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /v1/documents/{documentId}/generate-einvoice",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{apiKey}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/v1/documents/{{documentId}}/generate-einvoice",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "documents",
+                "{{documentId}}",
+                "generate-einvoice"
               ]
             }
           },
@@ -2478,7 +2504,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"\",\n  \"rate\": 0,\n  \"isDefault\": false\n}",
+              "raw": "{\n  \"name\": \"\",\n  \"rate\": 0,\n  \"isDefault\": false,\n  \"vatCategoryCode\": \"S\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -2517,7 +2543,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"version\": 0,\n  \"name\": \"\",\n  \"rate\": 0,\n  \"isDefault\": true\n}",
+              "raw": "{\n  \"version\": 0,\n  \"name\": \"\",\n  \"rate\": 0,\n  \"isDefault\": true,\n  \"vatCategoryCode\": \"\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
