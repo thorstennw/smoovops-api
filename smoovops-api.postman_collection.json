@@ -237,6 +237,23 @@
               "path": [
                 "v1",
                 "audit-events"
+              ],
+              "query": [
+                {
+                  "key": "cursor",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "disabled": true
+                },
+                {
+                  "key": "userId",
+                  "value": "",
+                  "disabled": true
+                }
               ]
             }
           },
@@ -465,6 +482,18 @@
               "path": [
                 "v1",
                 "budget-categories"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true
+                }
               ]
             }
           },
@@ -596,6 +625,23 @@
               "path": [
                 "v1",
                 "budget-entries"
+              ],
+              "query": [
+                {
+                  "key": "categoryId",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true
+                }
               ]
             }
           },
@@ -688,6 +734,28 @@
               "path": [
                 "v1",
                 "contracts"
+              ],
+              "query": [
+                {
+                  "key": "partnerId",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "sort",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true
+                }
               ]
             }
           },
@@ -909,6 +977,18 @@
                 "v1",
                 "dashboard",
                 "stats"
+              ],
+              "query": [
+                {
+                  "key": "from",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "to",
+                  "value": "",
+                  "disabled": true
+                }
               ]
             }
           },
@@ -934,6 +1014,33 @@
                 "v1",
                 "dashboard",
                 "timeseries"
+              ],
+              "query": [
+                {
+                  "key": "metric",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "granularity",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "view",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "to",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "from",
+                  "value": "",
+                  "disabled": true
+                }
               ]
             }
           },
@@ -993,6 +1100,23 @@
               "path": [
                 "v1",
                 "document-templates"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true
+                }
               ]
             }
           },
@@ -1188,6 +1312,23 @@
               "path": [
                 "v1",
                 "documents"
+              ],
+              "query": [
+                {
+                  "key": "contractId",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true
+                }
               ]
             }
           },
@@ -1435,6 +1576,18 @@
               "path": [
                 "v1",
                 "files"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true
+                }
               ]
             }
           },
@@ -1460,6 +1613,18 @@
                 "v1",
                 "files",
                 "download-url"
+              ],
+              "query": [
+                {
+                  "key": "key",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "fileId",
+                  "value": "",
+                  "disabled": true
+                }
               ]
             }
           },
@@ -1553,6 +1718,23 @@
               "path": [
                 "v1",
                 "leads"
+              ],
+              "query": [
+                {
+                  "key": "status",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true
+                }
               ]
             }
           },
@@ -1778,6 +1960,28 @@
               "path": [
                 "v1",
                 "notes"
+              ],
+              "query": [
+                {
+                  "key": "parentType",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "parentId",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true
+                }
               ]
             }
           },
@@ -1934,6 +2138,18 @@
               "path": [
                 "v1",
                 "partners"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true
+                }
               ]
             }
           },
@@ -2090,6 +2306,33 @@
               "path": [
                 "v1",
                 "payments"
+              ],
+              "query": [
+                {
+                  "key": "documentId",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "contractId",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "sort",
+                  "value": "",
+                  "disabled": true
+                },
+                {
+                  "key": "limit",
+                  "value": "1000",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true
+                }
               ]
             }
           },
@@ -2299,6 +2542,18 @@
               "path": [
                 "v1",
                 "products"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true
+                }
               ]
             }
           },
@@ -2485,6 +2740,18 @@
               "path": [
                 "v1",
                 "tax-rates"
+              ],
+              "query": [
+                {
+                  "key": "limit",
+                  "value": "20",
+                  "disabled": true
+                },
+                {
+                  "key": "page",
+                  "value": "1",
+                  "disabled": true
+                }
               ]
             }
           },

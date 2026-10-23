@@ -6,7 +6,7 @@ Personal API Token (PAT).
 ## What's here
 
 - **[`api-reference.md`](api-reference.md)** — every endpoint your token can call, with its
-  request fields, mirrored from [smoovops.com/doc/api-reference](https://smoovops.com/doc/api-reference).
+  query parameters and request fields, mirrored from [smoovops.com/doc/api-reference](https://smoovops.com/doc/api-reference).
 - **`smoovops-api.postman_collection.json`** + **`smoovops-api.postman_environment.json`** —
   the same endpoints as a ready-to-run Postman collection, grouped by resource with an
   example request body already filled in.
@@ -25,6 +25,10 @@ actually deployed.
 4. Open any request and select **Send**.
 
 That's it — token and key apply automatically to every request in the collection.
+
+Optional query parameters (paging, filters, the `key`/`fileId` of a file download) are already
+on each request's **Params** tab, prefilled with their default where there is one, but switched
+off — tick the ones you need.
 
 ## Not included
 

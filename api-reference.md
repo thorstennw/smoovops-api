@@ -16,7 +16,7 @@ See [API Access](https://smoovops.com/doc/api-access) for how to generate a toke
 quotas.
 
 **Response bodies are not yet documented here** — every endpoint below shows the request
-shape (if any); the shape of a successful response isn't part of this generated reference
+shape (query parameters and body, if any); the shape of a successful response isn't part of this generated reference
 yet. A [standalone PDF](https://smoovops.com/smoovops-api-reference-en.pdf) of this page is also available.
 
 
@@ -69,6 +69,14 @@ _No request body._
 ## Audit Trail
 
 ### GET `/v1/audit-events`
+
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `cursor` | string | No | — |
+| `limit` | integer | No | `20` |
+| `userId` | string | No | — |
 
 _No request body._
 
@@ -144,6 +152,13 @@ _No request body._
 
 ### GET `/v1/budget-categories`
 
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `limit` | integer | No | `20` |
+| `page` | integer | No | `1` |
+
 _No request body._
 
 ### POST `/v1/budget-categories`
@@ -175,6 +190,14 @@ _No request body._
 
 ### GET `/v1/budget-entries`
 
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `categoryId` | string | No | — |
+| `limit` | integer | No | `20` |
+| `page` | integer | No | `1` |
+
 _No request body._
 
 ### POST `/v1/budget-entries`
@@ -196,6 +219,15 @@ _No request body._
 ## Contracts
 
 ### GET `/v1/contracts`
+
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `partnerId` | string | No | — |
+| `sort` | string | No | — |
+| `limit` | integer | No | `20` |
+| `page` | integer | No | `1` |
 
 _No request body._
 
@@ -257,9 +289,26 @@ _No request body._
 
 ### GET `/v1/dashboard/stats`
 
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `from` | string | No | — |
+| `to` | string | No | — |
+
 _No request body._
 
 ### GET `/v1/dashboard/timeseries`
+
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `metric` | string | No | — |
+| `granularity` | string | No | — |
+| `view` | string | No | — |
+| `to` | string | No | — |
+| `from` | string | No | — |
 
 _No request body._
 
@@ -272,6 +321,14 @@ _No request body._
 ## Document Templates
 
 ### GET `/v1/document-templates`
+
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `status` | string | No | — |
+| `limit` | integer | No | `20` |
+| `page` | integer | No | `1` |
 
 _No request body._
 
@@ -347,6 +404,14 @@ _No request body._
 ## Documents
 
 ### GET `/v1/documents`
+
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `contractId` | string | No | — |
+| `limit` | integer | No | `20` |
+| `page` | integer | No | `1` |
 
 _No request body._
 
@@ -449,9 +514,23 @@ _No request body._
 
 ### GET `/v1/files`
 
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `limit` | integer | No | `20` |
+| `page` | integer | No | `1` |
+
 _No request body._
 
 ### GET `/v1/files/download-url`
+
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `key` | string | No | — |
+| `fileId` | string | No | — |
 
 _No request body._
 
@@ -471,6 +550,14 @@ _No request body._
 ## Leads
 
 ### GET `/v1/leads`
+
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `status` | string | No | — |
+| `limit` | integer | No | `20` |
+| `page` | integer | No | `1` |
 
 _No request body._
 
@@ -523,6 +610,12 @@ _No request body._
 
 ### GET `/v1/newsletter/confirm`
 
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `token` | string | No | — |
+
 _No request body._
 
 ### POST `/v1/newsletter/signup`
@@ -533,11 +626,26 @@ _No request body._
 
 ### GET `/v1/newsletter/unsubscribe`
 
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `token` | string | No | — |
+
 _No request body._
 
 ## Notes
 
 ### GET `/v1/notes`
+
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `parentType` | string | No | — |
+| `parentId` | string | No | — |
+| `limit` | integer | No | `20` |
+| `page` | integer | No | `1` |
 
 _No request body._
 
@@ -573,6 +681,13 @@ _No request body._
 ## Partners
 
 ### GET `/v1/partners`
+
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `limit` | integer | No | `20` |
+| `page` | integer | No | `1` |
 
 _No request body._
 
@@ -618,6 +733,16 @@ _No request body._
 ## Payments
 
 ### GET `/v1/payments`
+
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `documentId` | string | No | — |
+| `contractId` | string | No | — |
+| `sort` | string | No | — |
+| `limit` | integer | No | `1000` |
+| `page` | integer | No | `1` |
 
 _No request body._
 
@@ -696,6 +821,13 @@ _No request body._
 
 ### GET `/v1/products`
 
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `limit` | integer | No | `20` |
+| `page` | integer | No | `1` |
+
 _No request body._
 
 ### POST `/v1/products`
@@ -752,6 +884,13 @@ _No request body._
 ## Tax Rates
 
 ### GET `/v1/tax-rates`
+
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `limit` | integer | No | `20` |
+| `page` | integer | No | `1` |
 
 _No request body._
 
