@@ -58,6 +58,7 @@ _No request body._
 | `budgetsSuppressed` | boolean | No |
 | `reminderEmail` | string | No |
 | `allowContractReminderOverride` | boolean | No |
+| `allowInvoiceLineItemOverride` | boolean | No |
 | `dashboardWidgets` | array of object (DashboardWidgetSettingsSchema) | No |
 | `companyProfile` | object (CompanyProfileSchema) | No |
 | `dateFormat` | DD.MM.YYYY | DD/MM/YYYY | YYYY-MM-DD | No |
@@ -456,7 +457,12 @@ _No request body._
 
 ### POST `/v1/files/upload-url`
 
-_No request body._
+| Field | Type | Required |
+| --- | --- | --- |
+| `fileName` | string | Yes |
+| `fileSize` | integer | No |
+| `contentType` | string | No |
+| `skipProcessing` | boolean | No |
 
 ### DELETE `/v1/files/{fileId}`
 

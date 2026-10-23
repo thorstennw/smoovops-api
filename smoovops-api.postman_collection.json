@@ -203,7 +203,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"version\": 0,\n  \"budgetsSuppressed\": true,\n  \"reminderEmail\": \"\",\n  \"allowContractReminderOverride\": true,\n  \"dashboardWidgets\": [\n    {\n      \"widgetKey\": \"cardPartners\",\n      \"resource\": \"partners\",\n      \"displayMode\": \"last\",\n      \"startingPoint\": \"zero\",\n      \"periodOverride\": \"short\"\n    }\n  ],\n  \"companyProfile\": {\n    \"legalName\": \"\",\n    \"taxId\": \"\",\n    \"vatId\": \"\",\n    \"registrationCourt\": \"\",\n    \"registrationNumber\": \"\",\n    \"managingDirectorTitle\": \"\",\n    \"managingDirectorName\": \"\",\n    \"website\": \"\",\n    \"logoFileId\": \"\",\n    \"bankAccounts\": [\n      {\n        \"bankName\": \"\",\n        \"iban\": \"\",\n        \"bic\": \"\"\n      }\n    ]\n  },\n  \"dateFormat\": \"DD.MM.YYYY\",\n  \"numberFormat\": \"1.234,56\",\n  \"currency\": \"EUR\",\n  \"incomingPaymentTerm\": \"SOLL\"\n}",
+              "raw": "{\n  \"version\": 0,\n  \"budgetsSuppressed\": true,\n  \"reminderEmail\": \"\",\n  \"allowContractReminderOverride\": true,\n  \"allowInvoiceLineItemOverride\": true,\n  \"dashboardWidgets\": [\n    {\n      \"widgetKey\": \"cardPartners\",\n      \"resource\": \"partners\",\n      \"displayMode\": \"last\",\n      \"startingPoint\": \"zero\",\n      \"periodOverride\": \"short\"\n    }\n  ],\n  \"companyProfile\": {\n    \"legalName\": \"\",\n    \"taxId\": \"\",\n    \"vatId\": \"\",\n    \"registrationCourt\": \"\",\n    \"registrationNumber\": \"\",\n    \"managingDirectorTitle\": \"\",\n    \"managingDirectorName\": \"\",\n    \"website\": \"\",\n    \"logoFileId\": \"\",\n    \"bankAccounts\": [\n      {\n        \"bankName\": \"\",\n        \"iban\": \"\",\n        \"bic\": \"\"\n      }\n    ]\n  },\n  \"dateFormat\": \"DD.MM.YYYY\",\n  \"numberFormat\": \"1.234,56\",\n  \"currency\": \"EUR\",\n  \"incomingPaymentTerm\": \"SOLL\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1474,6 +1474,11 @@
                 "key": "x-api-key",
                 "value": "{{apiKey}}",
                 "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
               }
             ],
             "url": {
@@ -1486,6 +1491,15 @@
                 "files",
                 "upload-url"
               ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fileName\": \"\",\n  \"fileSize\": 0,\n  \"contentType\": \"application/octet-stream\",\n  \"skipProcessing\": false\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
             }
           },
           "response": []
