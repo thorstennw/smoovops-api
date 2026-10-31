@@ -1189,7 +1189,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"name\": \"\",\n  \"documentType\": \"LETTER\",\n  \"contentSource\": \"\",\n  \"fields\": [],\n  \"headerSource\": \"\",\n  \"headerVisibility\": \"ALL_PAGES\",\n  \"footerSource\": \"\",\n  \"footerVisibility\": \"ALL_PAGES\",\n  \"showLogo\": false,\n  \"logoPosition\": \"TOP_LEFT\",\n  \"status\": \"DRAFT\",\n  \"systemKey\": \"TERMINATION\",\n  \"compiledHeaderHtml\": \"\",\n  \"compiledContentHtml\": \"\",\n  \"compiledFooterHtml\": \"\"\n}",
+              "raw": "{\n  \"pugSource\": \"\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1401,7 +1401,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"documentType\": \"CONTRACT\",\n  \"name\": \"\",\n  \"documentNumber\": \"\",\n  \"contractId\": \"\",\n  \"contractName\": \"\",\n  \"partnerId\": \"\",\n  \"partnerName\": \"\",\n  \"creationDate\": \"\",\n  \"status\": \"DRAFT\",\n  \"source\": \"UPLOADED\",\n  \"templateId\": \"\",\n  \"sourceDocumentId\": \"\",\n  \"lineItems\": [\n    {\n      \"productId\": \"\",\n      \"name\": \"\",\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"taxRatePercent\": 0,\n      \"vatCategoryCode\": \"\",\n      \"unitCode\": \"C62\"\n    }\n  ],\n  \"taxBreakdown\": [\n    {\n      \"taxRatePercent\": 0,\n      \"netAmount\": 0,\n      \"taxAmount\": 0\n    }\n  ],\n  \"netAmount\": 0,\n  \"taxAmount\": 0,\n  \"totalAmount\": 0,\n  \"currency\": \"\",\n  \"dueDate\": \"\",\n  \"fileId\": \"\",\n  \"fileType\": \"\"\n}",
+              "raw": "{\n  \"files\": [\n    {\n      \"fileId\": \"\",\n      \"key\": \"\",\n      \"filename\": \"\"\n    }\n  ]\n}",
               "options": {
                 "raw": {
                   "language": "json"

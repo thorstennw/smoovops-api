@@ -61,10 +61,10 @@ _No request body._
 | `allowInvoiceLineItemOverride` | boolean | No |
 | `dashboardWidgets` | array of object (DashboardWidgetSettingsSchema) | No |
 | `companyProfile` | object (CompanyProfileSchema) | No |
-| `dateFormat` | DD.MM.YYYY | DD/MM/YYYY | YYYY-MM-DD | No |
-| `numberFormat` | 1.234,56 | 1,234.56 | No |
-| `currency` | EUR | GBP | CHF | SEK | DKK | NOK | PLN | CZK | HUF | RON | BGN | ISK | No |
-| `incomingPaymentTerm` | SOLL | HABEN | No |
+| `dateFormat` | DD.MM.YYYY \| DD/MM/YYYY \| YYYY-MM-DD | No |
+| `numberFormat` | 1.234,56 \| 1,234.56 | No |
+| `currency` | EUR \| GBP \| CHF \| SEK \| DKK \| NOK \| PLN \| CZK \| HUF \| RON \| BGN \| ISK | No |
+| `incomingPaymentTerm` | SOLL \| HABEN | No |
 
 ## Audit Trail
 
@@ -146,7 +146,7 @@ _No request body._
 | Field | Type | Required |
 | --- | --- | --- |
 | `version` | integer | Yes |
-| `decision` | ACCEPTED | REJECTED | Yes |
+| `decision` | ACCEPTED \| REJECTED | Yes |
 
 ## Budget Categories
 
@@ -238,11 +238,11 @@ _No request body._
 | `name` | string | Yes |
 | `partnerId` | string | Yes |
 | `partnerName` | string | Yes |
-| `partnerType` | CUSTOMER | VENDOR | No |
+| `partnerType` | CUSTOMER \| VENDOR | No |
 | `startDate` | string | Yes |
 | `totalValue` | number | Yes |
 | `currency` | string | Yes |
-| `status` | DRAFT | ACTIVE | EXPIRED | CANCELLED | No |
+| `status` | DRAFT \| ACTIVE \| EXPIRED \| CANCELLED | No |
 | `endDate` | string | No |
 | `description` | string | No |
 | `tags` | array of string | No |
@@ -260,8 +260,8 @@ _No request body._
 | `name` | string | No |
 | `partnerId` | string | No |
 | `partnerName` | string | No |
-| `partnerType` | CUSTOMER | VENDOR | No |
-| `status` | DRAFT | ACTIVE | EXPIRED | CANCELLED | No |
+| `partnerType` | CUSTOMER \| VENDOR | No |
+| `status` | DRAFT \| ACTIVE \| EXPIRED \| CANCELLED | No |
 | `startDate` | string | No |
 | `endDate` | string | No |
 | `totalValue` | number | No |
@@ -337,17 +337,17 @@ _No request body._
 | Field | Type | Required |
 | --- | --- | --- |
 | `name` | string | Yes |
-| `documentType` | LETTER | OFFER | INVOICE | OTHER | Yes |
+| `documentType` | LETTER \| OFFER \| INVOICE \| OTHER | Yes |
 | `contentSource` | string | Yes |
 | `fields` | array of object (TemplateField) | No |
 | `headerSource` | string | No |
-| `headerVisibility` | ALL_PAGES | FIRST_PAGE_ONLY | LAST_PAGE_ONLY | No |
+| `headerVisibility` | ALL_PAGES \| FIRST_PAGE_ONLY \| LAST_PAGE_ONLY | No |
 | `footerSource` | string | No |
-| `footerVisibility` | ALL_PAGES | FIRST_PAGE_ONLY | LAST_PAGE_ONLY | No |
+| `footerVisibility` | ALL_PAGES \| FIRST_PAGE_ONLY \| LAST_PAGE_ONLY | No |
 | `showLogo` | boolean | No |
-| `logoPosition` | TOP_LEFT | TOP_RIGHT | No |
-| `status` | DRAFT | PUBLISHED | No |
-| `systemKey` | TERMINATION | NOTICE | OFFER | INVOICE | No |
+| `logoPosition` | TOP_LEFT \| TOP_RIGHT | No |
+| `status` | DRAFT \| PUBLISHED | No |
+| `systemKey` | TERMINATION \| NOTICE \| OFFER \| INVOICE | No |
 | `compiledHeaderHtml` | string | No |
 | `compiledContentHtml` | string | No |
 | `compiledFooterHtml` | string | No |
@@ -356,21 +356,7 @@ _No request body._
 
 | Field | Type | Required |
 | --- | --- | --- |
-| `name` | string | Yes |
-| `documentType` | LETTER | OFFER | INVOICE | OTHER | Yes |
-| `contentSource` | string | Yes |
-| `fields` | array of object (TemplateField) | No |
-| `headerSource` | string | No |
-| `headerVisibility` | ALL_PAGES | FIRST_PAGE_ONLY | LAST_PAGE_ONLY | No |
-| `footerSource` | string | No |
-| `footerVisibility` | ALL_PAGES | FIRST_PAGE_ONLY | LAST_PAGE_ONLY | No |
-| `showLogo` | boolean | No |
-| `logoPosition` | TOP_LEFT | TOP_RIGHT | No |
-| `status` | DRAFT | PUBLISHED | No |
-| `systemKey` | TERMINATION | NOTICE | OFFER | INVOICE | No |
-| `compiledHeaderHtml` | string | No |
-| `compiledContentHtml` | string | No |
-| `compiledFooterHtml` | string | No |
+| `pugSource` | string | Yes |
 
 ### GET `/v1/document-templates/{templateId}`
 
@@ -382,17 +368,17 @@ _No request body._
 | --- | --- | --- |
 | `version` | integer | Yes |
 | `name` | string | No |
-| `documentType` | LETTER | OFFER | INVOICE | OTHER | No |
+| `documentType` | LETTER \| OFFER \| INVOICE \| OTHER | No |
 | `contentSource` | string | No |
 | `fields` | array of object (TemplateField) | No |
-| `status` | DRAFT | PUBLISHED | No |
+| `status` | DRAFT \| PUBLISHED | No |
 | `headerSource` | string | No |
-| `headerVisibility` | ALL_PAGES | FIRST_PAGE_ONLY | LAST_PAGE_ONLY | No |
+| `headerVisibility` | ALL_PAGES \| FIRST_PAGE_ONLY \| LAST_PAGE_ONLY | No |
 | `footerSource` | string | No |
-| `footerVisibility` | ALL_PAGES | FIRST_PAGE_ONLY | LAST_PAGE_ONLY | No |
+| `footerVisibility` | ALL_PAGES \| FIRST_PAGE_ONLY \| LAST_PAGE_ONLY | No |
 | `showLogo` | boolean | No |
-| `logoPosition` | TOP_LEFT | TOP_RIGHT | No |
-| `systemKey` | TERMINATION | NOTICE | OFFER | INVOICE | No |
+| `logoPosition` | TOP_LEFT \| TOP_RIGHT | No |
+| `systemKey` | TERMINATION \| NOTICE \| OFFER \| INVOICE | No |
 | `compiledHeaderHtml` | string | No |
 | `compiledContentHtml` | string | No |
 | `compiledFooterHtml` | string | No |
@@ -419,7 +405,7 @@ _No request body._
 
 | Field | Type | Required |
 | --- | --- | --- |
-| `documentType` | CONTRACT | INVOICE | DELIVERY | LETTER | OFFER | RECEIPT | OTHER | Yes |
+| `documentType` | CONTRACT \| INVOICE \| DELIVERY \| LETTER \| OFFER \| RECEIPT \| OTHER | Yes |
 | `name` | string | Yes |
 | `documentNumber` | string | No |
 | `contractId` | string | No |
@@ -427,8 +413,8 @@ _No request body._
 | `partnerId` | string | No |
 | `partnerName` | string | No |
 | `creationDate` | string | Yes |
-| `status` | DRAFT | FINAL | No |
-| `source` | GENERATED | UPLOADED | No |
+| `status` | DRAFT \| FINAL | No |
+| `source` | GENERATED \| UPLOADED | No |
 | `templateId` | string | No |
 | `sourceDocumentId` | string | No |
 | `lineItems` | array of object (LineItemSchema) | No |
@@ -445,27 +431,7 @@ _No request body._
 
 | Field | Type | Required |
 | --- | --- | --- |
-| `documentType` | CONTRACT | INVOICE | DELIVERY | LETTER | OFFER | RECEIPT | OTHER | Yes |
-| `name` | string | Yes |
-| `documentNumber` | string | No |
-| `contractId` | string | No |
-| `contractName` | string | No |
-| `partnerId` | string | No |
-| `partnerName` | string | No |
-| `creationDate` | string | Yes |
-| `status` | DRAFT | FINAL | No |
-| `source` | GENERATED | UPLOADED | No |
-| `templateId` | string | No |
-| `sourceDocumentId` | string | No |
-| `lineItems` | array of object (LineItemSchema) | No |
-| `taxBreakdown` | array of object (TaxBreakdownEntrySchema) | No |
-| `netAmount` | number | No |
-| `taxAmount` | number | No |
-| `totalAmount` | number | No |
-| `currency` | string | No |
-| `dueDate` | string | No |
-| `fileId` | string | No |
-| `fileType` | string | No |
+| `files` | array of object (ProcessingFileRef) | Yes |
 
 ### GET `/v1/documents/{documentId}`
 
@@ -476,7 +442,7 @@ _No request body._
 | Field | Type | Required |
 | --- | --- | --- |
 | `version` | integer | Yes |
-| `documentType` | CONTRACT | INVOICE | DELIVERY | LETTER | OFFER | RECEIPT | OTHER | No |
+| `documentType` | CONTRACT \| INVOICE \| DELIVERY \| LETTER \| OFFER \| RECEIPT \| OTHER | No |
 | `name` | string | No |
 | `documentNumber` | string | No |
 | `contractId` | string | No |
@@ -484,8 +450,8 @@ _No request body._
 | `partnerId` | string | No |
 | `partnerName` | string | No |
 | `creationDate` | string | No |
-| `status` | DRAFT | FINAL | No |
-| `source` | GENERATED | UPLOADED | No |
+| `status` | DRAFT \| FINAL | No |
+| `source` | GENERATED \| UPLOADED | No |
 | `templateId` | string | No |
 | `sourceDocumentId` | string | No |
 | `lineItems` | array of object (LineItemSchema) | No |
@@ -568,7 +534,7 @@ _No request body._
 | `name` | string | Yes |
 | `contactEmail` | string | No |
 | `contactPhone` | string | No |
-| `source` | WEBSITE | REFERRAL | EVENT | LINKEDIN | OTHER | Yes |
+| `source` | WEBSITE \| REFERRAL \| EVENT \| LINKEDIN \| OTHER | Yes |
 | `notes` | string | No |
 
 ### GET `/v1/leads/{leadId}`
@@ -583,8 +549,8 @@ _No request body._
 | `name` | string | No |
 | `contactEmail` | string | No |
 | `contactPhone` | string | No |
-| `source` | WEBSITE | REFERRAL | EVENT | LINKEDIN | OTHER | No |
-| `status` | LEAD | QUALIFIED | WON | LOST | No |
+| `source` | WEBSITE \| REFERRAL \| EVENT \| LINKEDIN \| OTHER | No |
+| `status` | LEAD \| QUALIFIED \| WON \| LOST | No |
 | `notes` | string | No |
 
 ### DELETE `/v1/leads/{leadId}`
@@ -614,7 +580,18 @@ _No request body._
 
 | Parameter | Type | Required | Default |
 | --- | --- | --- | --- |
+| `lang` | string | No | — |
 | `token` | string | No | — |
+
+_No request body._
+
+### POST `/v1/newsletter/confirm`
+
+**Query parameters**
+
+| Parameter | Type | Required | Default |
+| --- | --- | --- | --- |
+| `lang` | string | No | — |
 
 _No request body._
 
@@ -623,6 +600,8 @@ _No request body._
 | Field | Type | Required |
 | --- | --- | --- |
 | `email` | string | Yes |
+| `lang` | en \| de | No |
+| `booklet` | lean-back-office \| e-invoice | No |
 
 ### GET `/v1/newsletter/unsubscribe`
 
@@ -630,6 +609,7 @@ _No request body._
 
 | Parameter | Type | Required | Default |
 | --- | --- | --- | --- |
+| `lang` | string | No | — |
 | `token` | string | No | — |
 
 _No request body._
@@ -653,9 +633,9 @@ _No request body._
 
 | Field | Type | Required |
 | --- | --- | --- |
-| `parentType` | PARTNER | CONTRACT | PAYMENT | PRODUCT | Yes |
+| `parentType` | PARTNER \| CONTRACT \| PAYMENT \| PRODUCT | Yes |
 | `parentId` | string | Yes |
-| `type` | NOTE | REMINDER | Yes |
+| `type` | NOTE \| REMINDER | Yes |
 | `title` | string | Yes |
 | `content` | string | Yes |
 | `dueDate` | string | No |
@@ -696,7 +676,7 @@ _No request body._
 | Field | Type | Required |
 | --- | --- | --- |
 | `name` | string | Yes |
-| `type` | CUSTOMER | VENDOR | Yes |
+| `type` | CUSTOMER \| VENDOR | Yes |
 | `description` | string | No |
 | `website` | string | No |
 | `logoFileId` | string | No |
@@ -716,7 +696,7 @@ _No request body._
 | --- | --- | --- |
 | `version` | integer | Yes |
 | `name` | string | No |
-| `type` | CUSTOMER | VENDOR | No |
+| `type` | CUSTOMER \| VENDOR | No |
 | `description` | string | No |
 | `website` | string | No |
 | `logoFileId` | string | No |
@@ -750,7 +730,7 @@ _No request body._
 
 | Field | Type | Required |
 | --- | --- | --- |
-| `direction` | INCOMING | OUTGOING | Yes |
+| `direction` | INCOMING \| OUTGOING | Yes |
 | `documentId` | string | No |
 | `documentNumber` | string | No |
 | `contractId` | string | No |
@@ -760,8 +740,8 @@ _No request body._
 | `amount` | number | Yes |
 | `currency` | string | Yes |
 | `paymentDate` | string | Yes |
-| `status` | PENDING | MARKED | SUCCEEDED | FAILED | REFUNDED | No |
-| `paymentMethod` | BANK_TRANSFER | CREDIT_CARD | DIRECT_DEBIT | OTHER | No |
+| `status` | PENDING \| MARKED \| SUCCEEDED \| FAILED \| REFUNDED | No |
+| `paymentMethod` | BANK_TRANSFER \| CREDIT_CARD \| DIRECT_DEBIT \| OTHER | No |
 | `stripePaymentIntentId` | string | No |
 | `failureReason` | string | No |
 
@@ -774,11 +754,11 @@ _No request body._
 | Field | Type | Required |
 | --- | --- | --- |
 | `version` | integer | Yes |
-| `status` | PENDING | MARKED | SUCCEEDED | FAILED | REFUNDED | No |
+| `status` | PENDING \| MARKED \| SUCCEEDED \| FAILED \| REFUNDED | No |
 | `amount` | number | No |
 | `currency` | string | No |
 | `paymentDate` | string | No |
-| `paymentMethod` | BANK_TRANSFER | CREDIT_CARD | DIRECT_DEBIT | OTHER | No |
+| `paymentMethod` | BANK_TRANSFER \| CREDIT_CARD \| DIRECT_DEBIT \| OTHER | No |
 | `stripePaymentIntentId` | string | No |
 | `failureReason` | string | No |
 | `contractId` | string | No |
@@ -792,7 +772,7 @@ _No request body._
 
 | Field | Type | Required |
 | --- | --- | --- |
-| `direction` | INCOMING | OUTGOING | Yes |
+| `direction` | INCOMING \| OUTGOING | Yes |
 | `documentId` | string | No |
 | `documentNumber` | string | No |
 | `contractId` | string | No |
@@ -802,8 +782,8 @@ _No request body._
 | `amount` | number | Yes |
 | `currency` | string | Yes |
 | `paymentDate` | string | Yes |
-| `status` | PENDING | MARKED | SUCCEEDED | FAILED | REFUNDED | No |
-| `paymentMethod` | BANK_TRANSFER | CREDIT_CARD | DIRECT_DEBIT | OTHER | No |
+| `status` | PENDING \| MARKED \| SUCCEEDED \| FAILED \| REFUNDED | No |
+| `paymentMethod` | BANK_TRANSFER \| CREDIT_CARD \| DIRECT_DEBIT \| OTHER | No |
 | `stripePaymentIntentId` | string | No |
 | `failureReason` | string | No |
 
@@ -835,7 +815,7 @@ _No request body._
 | Field | Type | Required |
 | --- | --- | --- |
 | `name` | string | Yes |
-| `type` | SERVICE | GOODS | Yes |
+| `type` | SERVICE \| GOODS | Yes |
 | `unitPrice` | number | Yes |
 | `currency` | string | Yes |
 | `unit` | string | No |
@@ -854,7 +834,7 @@ _No request body._
 | --- | --- | --- |
 | `version` | integer | Yes |
 | `name` | string | No |
-| `type` | SERVICE | GOODS | No |
+| `type` | SERVICE \| GOODS | No |
 | `unitPrice` | number | No |
 | `currency` | string | No |
 | `unit` | string | No |
@@ -877,9 +857,7 @@ _No request body._
 
 ### POST `/v1/webhooks/stripe-subscriptions`
 
-| Field | Type | Required |
-| --- | --- | --- |
-| `paymentMethodId` | string | Yes |
+_No request body._
 
 ## Tax Rates
 
@@ -941,15 +919,15 @@ _No request body._
 | --- | --- | --- |
 | `name` | string | Yes |
 | `email` | string | Yes |
-| `role` | admin | user | Yes |
+| `role` | admin \| user | Yes |
 
 ### POST `/v1/users/confirm`
 
 | Field | Type | Required |
 | --- | --- | --- |
-| `name` | string | Yes |
 | `email` | string | Yes |
-| `role` | admin | user | Yes |
+| `code` | string | Yes |
+| `password` | string | Yes |
 
 ### GET `/v1/users/{userId}`
 
@@ -959,7 +937,7 @@ _No request body._
 
 | Field | Type | Required |
 | --- | --- | --- |
-| `role` | admin | user | Yes |
+| `role` | admin \| user | Yes |
 
 ### DELETE `/v1/users/{userId}`
 
