@@ -595,14 +595,6 @@ _No request body._
 
 _No request body._
 
-### POST `/v1/newsletter/signup`
-
-| Field | Type | Required |
-| --- | --- | --- |
-| `email` | string | Yes |
-| `lang` | en \| de | No |
-| `booklet` | lean-back-office \| e-invoice | No |
-
 ### GET `/v1/newsletter/unsubscribe`
 
 **Query parameters**
