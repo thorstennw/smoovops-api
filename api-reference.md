@@ -424,6 +424,8 @@ _No request body._
 | `totalAmount` | number | No |
 | `currency` | string | No |
 | `dueDate` | string | No |
+| `deliveryDate` | string | No |
+| `servicePeriod` | object (ServicePeriodSchema) | No |
 | `fileId` | string | No |
 | `fileType` | string | No |
 
@@ -461,6 +463,8 @@ _No request body._
 | `totalAmount` | number | No |
 | `currency` | string | No |
 | `dueDate` | string | No |
+| `deliveryDate` | string | No |
+| `servicePeriod` | object (ServicePeriodSchema) | No |
 | `fileId` | string | No |
 | `fileType` | string | No |
 
@@ -677,6 +681,8 @@ _No request body._
 | `vatId` | string | No |
 | `registrationCourt` | string | No |
 | `registrationNumber` | string | No |
+| `leitwegId` | string | No |
+| `einvoiceFormat` | ZUGFERD \| XRECHNUNG | No |
 
 ### GET `/v1/partners/{partnerId}`
 
@@ -697,6 +703,8 @@ _No request body._
 | `vatId` | string | No |
 | `registrationCourt` | string | No |
 | `registrationNumber` | string | No |
+| `leitwegId` | string | No |
+| `einvoiceFormat` | ZUGFERD \| XRECHNUNG | No |
 
 ### DELETE `/v1/partners/{partnerId}`
 
@@ -872,6 +880,7 @@ _No request body._
 | `rate` | number | Yes |
 | `isDefault` | boolean | No |
 | `vatCategoryCode` | string | No |
+| `exemptionReason` | string | No |
 
 ### PATCH `/v1/tax-rates/{taxRateId}`
 
@@ -882,6 +891,7 @@ _No request body._
 | `rate` | number | No |
 | `isDefault` | boolean | No |
 | `vatCategoryCode` | string | No |
+| `exemptionReason` | string | No |
 
 ### DELETE `/v1/tax-rates/{taxRateId}`
 
