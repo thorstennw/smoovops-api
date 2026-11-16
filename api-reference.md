@@ -429,6 +429,10 @@ _No request body._
 | `fileId` | string | No |
 | `fileType` | string | No |
 
+### GET `/v1/documents/invoice-quota`
+
+_No request body._
+
 ### POST `/v1/documents/processing`
 
 | Field | Type | Required |
@@ -512,6 +516,7 @@ _No request body._
 | `fileSize` | integer | No |
 | `contentType` | string | No |
 | `skipProcessing` | boolean | No |
+| `purpose` | EINVOICE \| GENERATED_DOCUMENT | No |
 
 ### DELETE `/v1/files/{fileId}`
 
