@@ -1362,7 +1362,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"documentType\": \"CONTRACT\",\n  \"name\": \"\",\n  \"documentNumber\": \"\",\n  \"contractId\": \"\",\n  \"contractName\": \"\",\n  \"partnerId\": \"\",\n  \"partnerName\": \"\",\n  \"creationDate\": \"\",\n  \"status\": \"DRAFT\",\n  \"source\": \"UPLOADED\",\n  \"templateId\": \"\",\n  \"sourceDocumentId\": \"\",\n  \"lineItems\": [\n    {\n      \"productId\": \"\",\n      \"name\": \"\",\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"taxRatePercent\": 0,\n      \"vatCategoryCode\": \"\",\n      \"unitCode\": \"C62\",\n      \"exemptionReason\": \"\"\n    }\n  ],\n  \"taxBreakdown\": [\n    {\n      \"taxRatePercent\": 0,\n      \"netAmount\": 0,\n      \"taxAmount\": 0,\n      \"vatCategoryCode\": \"\",\n      \"exemptionReason\": \"\"\n    }\n  ],\n  \"netAmount\": 0,\n  \"taxAmount\": 0,\n  \"totalAmount\": 0,\n  \"currency\": \"\",\n  \"dueDate\": \"\",\n  \"deliveryDate\": \"\",\n  \"servicePeriod\": {\n    \"start\": \"\",\n    \"end\": \"\"\n  },\n  \"fileId\": \"\",\n  \"fileType\": \"\"\n}",
+              "raw": "{\n  \"documentType\": \"CONTRACT\",\n  \"name\": \"\",\n  \"documentNumber\": \"\",\n  \"contractId\": \"\",\n  \"contractName\": \"\",\n  \"partnerId\": \"\",\n  \"partnerName\": \"\",\n  \"creationDate\": \"\",\n  \"status\": \"DRAFT\",\n  \"source\": \"UPLOADED\",\n  \"templateId\": \"\",\n  \"sourceDocumentId\": \"\",\n  \"lineItems\": [\n    {\n      \"productId\": \"\",\n      \"name\": \"\",\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"taxRatePercent\": 0,\n      \"vatCategoryCode\": \"\",\n      \"unitCode\": \"C62\",\n      \"exemptionReason\": \"\"\n    }\n  ],\n  \"taxBreakdown\": [\n    {\n      \"taxRatePercent\": 0,\n      \"netAmount\": 0,\n      \"taxAmount\": 0,\n      \"vatCategoryCode\": \"\",\n      \"exemptionReason\": \"\"\n    }\n  ],\n  \"netAmount\": 0,\n  \"taxAmount\": 0,\n  \"totalAmount\": 0,\n  \"currency\": \"\",\n  \"dueDate\": \"\",\n  \"deliveryDate\": \"\",\n  \"servicePeriod\": {\n    \"start\": \"\",\n    \"end\": \"\"\n  },\n  \"fileId\": \"\",\n  \"fileType\": \"\",\n  \"cancellationReason\": \"\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1526,6 +1526,32 @@
           "response": []
         },
         {
+          "name": "POST /v1/documents/{documentId}/cancel",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{apiKey}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/v1/documents/{{documentId}}/cancel",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "documents",
+                "{{documentId}}",
+                "cancel"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
           "name": "POST /v1/documents/{documentId}/generate-einvoice",
           "request": {
             "method": "POST",
@@ -1552,6 +1578,46 @@
           "response": []
         },
         {
+          "name": "POST /v1/documents/{documentId}/issue",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{apiKey}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/v1/documents/{{documentId}}/issue",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "documents",
+                "{{documentId}}",
+                "issue"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"version\": 0\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
           "name": "POST /v1/documents/{documentId}/send",
           "request": {
             "method": "POST",
@@ -1572,6 +1638,32 @@
                 "documents",
                 "{{documentId}}",
                 "send"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /v1/documents/{documentId}/verify",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{apiKey}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/v1/documents/{{documentId}}/verify",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "documents",
+                "{{documentId}}",
+                "verify"
               ]
             }
           },

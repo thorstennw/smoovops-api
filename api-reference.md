@@ -1,9 +1,6 @@
 # API Reference
 
-Mirrored from [smoovops.com/doc/api-reference](https://smoovops.com/doc/api-reference) — see
-this repository's [README](README.md) for the Postman collection that goes with it.
-
-This page lists every endpoint available to a [Personal API Token](https://smoovops.com/doc/api-access) —
+This page lists every endpoint available to a [Personal API Token](/doc/api-access) —
 auto-generated from the backend's route definitions, so it always matches what's actually
 deployed. Every request must carry both required headers:
 
@@ -12,12 +9,12 @@ Authorization: Bearer smv_live_...
 x-api-key: <your API key>
 ```
 
-See [API Access](https://smoovops.com/doc/api-access) for how to generate a token, and for rate limits and
+See [API Access](/doc/api-access) for how to generate a token, and for rate limits and
 quotas.
 
 **Response bodies are not yet documented here** — every endpoint below shows the request
 shape (query parameters and body, if any); the shape of a successful response isn't part of this generated reference
-yet. A [standalone PDF](https://smoovops.com/smoovops-api-reference-en.pdf) of this page is also available.
+yet. A [standalone PDF](/smoovops-api-reference-en.pdf) of this page is also available.
 
 
 ## API Tokens
@@ -337,7 +334,7 @@ _No request body._
 | Field | Type | Required |
 | --- | --- | --- |
 | `name` | string | Yes |
-| `documentType` | LETTER \| OFFER \| INVOICE \| OTHER | Yes |
+| `documentType` | LETTER \| OFFER \| INVOICE \| OTHER \| CANCELLATION | Yes |
 | `contentSource` | string | Yes |
 | `fields` | array of object (TemplateField) | No |
 | `headerSource` | string | No |
@@ -347,7 +344,7 @@ _No request body._
 | `showLogo` | boolean | No |
 | `logoPosition` | TOP_LEFT \| TOP_RIGHT | No |
 | `status` | DRAFT \| PUBLISHED | No |
-| `systemKey` | TERMINATION \| NOTICE \| OFFER \| INVOICE | No |
+| `systemKey` | TERMINATION \| NOTICE \| OFFER \| INVOICE \| CANCELLATION | No |
 | `compiledHeaderHtml` | string | No |
 | `compiledContentHtml` | string | No |
 | `compiledFooterHtml` | string | No |
@@ -368,7 +365,7 @@ _No request body._
 | --- | --- | --- |
 | `version` | integer | Yes |
 | `name` | string | No |
-| `documentType` | LETTER \| OFFER \| INVOICE \| OTHER | No |
+| `documentType` | LETTER \| OFFER \| INVOICE \| OTHER \| CANCELLATION | No |
 | `contentSource` | string | No |
 | `fields` | array of object (TemplateField) | No |
 | `status` | DRAFT \| PUBLISHED | No |
@@ -378,7 +375,7 @@ _No request body._
 | `footerVisibility` | ALL_PAGES \| FIRST_PAGE_ONLY \| LAST_PAGE_ONLY | No |
 | `showLogo` | boolean | No |
 | `logoPosition` | TOP_LEFT \| TOP_RIGHT | No |
-| `systemKey` | TERMINATION \| NOTICE \| OFFER \| INVOICE | No |
+| `systemKey` | TERMINATION \| NOTICE \| OFFER \| INVOICE \| CANCELLATION | No |
 | `compiledHeaderHtml` | string | No |
 | `compiledContentHtml` | string | No |
 | `compiledFooterHtml` | string | No |
@@ -405,7 +402,7 @@ _No request body._
 
 | Field | Type | Required |
 | --- | --- | --- |
-| `documentType` | CONTRACT \| INVOICE \| DELIVERY \| LETTER \| OFFER \| RECEIPT \| OTHER | Yes |
+| `documentType` | CONTRACT \| INVOICE \| DELIVERY \| LETTER \| OFFER \| RECEIPT \| OTHER \| CANCELLATION | Yes |
 | `name` | string | Yes |
 | `documentNumber` | string | No |
 | `contractId` | string | No |
@@ -428,6 +425,7 @@ _No request body._
 | `servicePeriod` | object (ServicePeriodSchema) | No |
 | `fileId` | string | No |
 | `fileType` | string | No |
+| `cancellationReason` | string | No |
 
 ### GET `/v1/documents/invoice-quota`
 
@@ -448,7 +446,7 @@ _No request body._
 | Field | Type | Required |
 | --- | --- | --- |
 | `version` | integer | Yes |
-| `documentType` | CONTRACT \| INVOICE \| DELIVERY \| LETTER \| OFFER \| RECEIPT \| OTHER | No |
+| `documentType` | CONTRACT \| INVOICE \| DELIVERY \| LETTER \| OFFER \| RECEIPT \| OTHER \| CANCELLATION | No |
 | `name` | string | No |
 | `documentNumber` | string | No |
 | `contractId` | string | No |
@@ -476,11 +474,25 @@ _No request body._
 
 _No request body._
 
+### POST `/v1/documents/{documentId}/cancel`
+
+_No request body._
+
 ### POST `/v1/documents/{documentId}/generate-einvoice`
 
 _No request body._
 
+### POST `/v1/documents/{documentId}/issue`
+
+| Field | Type | Required |
+| --- | --- | --- |
+| `version` | integer | Yes |
+
 ### POST `/v1/documents/{documentId}/send`
+
+_No request body._
+
+### GET `/v1/documents/{documentId}/verify`
 
 _No request body._
 
