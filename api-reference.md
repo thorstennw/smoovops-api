@@ -426,8 +426,26 @@ _No request body._
 | `fileId` | string | No |
 | `fileType` | string | No |
 | `cancellationReason` | string | No |
+| `renderSourceFileId` | string | No |
+| `paymentTermDays` | integer | No |
+| `dateFormat` | DD.MM.YYYY \| DD/MM/YYYY \| YYYY-MM-DD | No |
 
 ### GET `/v1/documents/invoice-quota`
+
+_No request body._
+
+### GET `/v1/documents/numbering`
+
+_No request body._
+
+### PUT `/v1/documents/numbering`
+
+| Field | Type | Required |
+| --- | --- | --- |
+| `version` | integer | Yes |
+| `series` | object (NumberingSeriesUpdates) | Yes |
+
+### POST `/v1/documents/numbering/OFFER/reserve`
 
 _No request body._
 
@@ -469,6 +487,9 @@ _No request body._
 | `servicePeriod` | object (ServicePeriodSchema) | No |
 | `fileId` | string | No |
 | `fileType` | string | No |
+| `renderSourceFileId` | string | No |
+| `paymentTermDays` | integer | No |
+| `dateFormat` | DD.MM.YYYY \| DD/MM/YYYY \| YYYY-MM-DD | No |
 
 ### DELETE `/v1/documents/{documentId}`
 

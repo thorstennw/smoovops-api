@@ -1362,7 +1362,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"documentType\": \"CONTRACT\",\n  \"name\": \"\",\n  \"documentNumber\": \"\",\n  \"contractId\": \"\",\n  \"contractName\": \"\",\n  \"partnerId\": \"\",\n  \"partnerName\": \"\",\n  \"creationDate\": \"\",\n  \"status\": \"DRAFT\",\n  \"source\": \"UPLOADED\",\n  \"templateId\": \"\",\n  \"sourceDocumentId\": \"\",\n  \"lineItems\": [\n    {\n      \"productId\": \"\",\n      \"name\": \"\",\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"taxRatePercent\": 0,\n      \"vatCategoryCode\": \"\",\n      \"unitCode\": \"C62\",\n      \"exemptionReason\": \"\"\n    }\n  ],\n  \"taxBreakdown\": [\n    {\n      \"taxRatePercent\": 0,\n      \"netAmount\": 0,\n      \"taxAmount\": 0,\n      \"vatCategoryCode\": \"\",\n      \"exemptionReason\": \"\"\n    }\n  ],\n  \"netAmount\": 0,\n  \"taxAmount\": 0,\n  \"totalAmount\": 0,\n  \"currency\": \"\",\n  \"dueDate\": \"\",\n  \"deliveryDate\": \"\",\n  \"servicePeriod\": {\n    \"start\": \"\",\n    \"end\": \"\"\n  },\n  \"fileId\": \"\",\n  \"fileType\": \"\",\n  \"cancellationReason\": \"\"\n}",
+              "raw": "{\n  \"documentType\": \"CONTRACT\",\n  \"name\": \"\",\n  \"documentNumber\": \"\",\n  \"contractId\": \"\",\n  \"contractName\": \"\",\n  \"partnerId\": \"\",\n  \"partnerName\": \"\",\n  \"creationDate\": \"\",\n  \"status\": \"DRAFT\",\n  \"source\": \"UPLOADED\",\n  \"templateId\": \"\",\n  \"sourceDocumentId\": \"\",\n  \"lineItems\": [\n    {\n      \"productId\": \"\",\n      \"name\": \"\",\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"taxRatePercent\": 0,\n      \"vatCategoryCode\": \"\",\n      \"unitCode\": \"C62\",\n      \"exemptionReason\": \"\"\n    }\n  ],\n  \"taxBreakdown\": [\n    {\n      \"taxRatePercent\": 0,\n      \"netAmount\": 0,\n      \"taxAmount\": 0,\n      \"vatCategoryCode\": \"\",\n      \"exemptionReason\": \"\"\n    }\n  ],\n  \"netAmount\": 0,\n  \"taxAmount\": 0,\n  \"totalAmount\": 0,\n  \"currency\": \"\",\n  \"dueDate\": \"\",\n  \"deliveryDate\": \"\",\n  \"servicePeriod\": {\n    \"start\": \"\",\n    \"end\": \"\"\n  },\n  \"fileId\": \"\",\n  \"fileType\": \"\",\n  \"cancellationReason\": \"\",\n  \"renderSourceFileId\": \"\",\n  \"paymentTermDays\": 0,\n  \"dateFormat\": \"DD.MM.YYYY\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
@@ -1392,6 +1392,97 @@
                 "v1",
                 "documents",
                 "invoice-quota"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "GET /v1/documents/numbering",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{apiKey}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/v1/documents/numbering",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "documents",
+                "numbering"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "PUT /v1/documents/numbering",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{apiKey}}",
+                "type": "text"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/v1/documents/numbering",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "documents",
+                "numbering"
+              ]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"version\": 0,\n  \"series\": {\n    \"INVOICE\": {\n      \"mode\": \"AUTOMATIC\",\n      \"pattern\": \"\",\n      \"startNumber\": 0\n    },\n    \"CANCELLATION\": {\n      \"mode\": \"AUTOMATIC\",\n      \"pattern\": \"\",\n      \"startNumber\": 0\n    },\n    \"OFFER\": {\n      \"mode\": \"AUTOMATIC\",\n      \"pattern\": \"\",\n      \"startNumber\": 0\n    }\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "POST /v1/documents/numbering/OFFER/reserve",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "{{apiKey}}",
+                "type": "text"
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/v1/documents/numbering/OFFER/reserve",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "v1",
+                "documents",
+                "numbering",
+                "OFFER",
+                "reserve"
               ]
             }
           },
@@ -1490,7 +1581,7 @@
             },
             "body": {
               "mode": "raw",
-              "raw": "{\n  \"version\": 0,\n  \"documentType\": \"CONTRACT\",\n  \"name\": \"\",\n  \"documentNumber\": \"\",\n  \"contractId\": \"\",\n  \"contractName\": \"\",\n  \"partnerId\": \"\",\n  \"partnerName\": \"\",\n  \"creationDate\": \"\",\n  \"status\": \"DRAFT\",\n  \"source\": \"GENERATED\",\n  \"templateId\": \"\",\n  \"sourceDocumentId\": \"\",\n  \"lineItems\": [\n    {\n      \"productId\": \"\",\n      \"name\": \"\",\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"taxRatePercent\": 0,\n      \"vatCategoryCode\": \"\",\n      \"unitCode\": \"C62\",\n      \"exemptionReason\": \"\"\n    }\n  ],\n  \"taxBreakdown\": [\n    {\n      \"taxRatePercent\": 0,\n      \"netAmount\": 0,\n      \"taxAmount\": 0,\n      \"vatCategoryCode\": \"\",\n      \"exemptionReason\": \"\"\n    }\n  ],\n  \"netAmount\": 0,\n  \"taxAmount\": 0,\n  \"totalAmount\": 0,\n  \"currency\": \"\",\n  \"dueDate\": \"\",\n  \"deliveryDate\": \"\",\n  \"servicePeriod\": {\n    \"start\": \"\",\n    \"end\": \"\"\n  },\n  \"fileId\": \"\",\n  \"fileType\": \"\"\n}",
+              "raw": "{\n  \"version\": 0,\n  \"documentType\": \"CONTRACT\",\n  \"name\": \"\",\n  \"documentNumber\": \"\",\n  \"contractId\": \"\",\n  \"contractName\": \"\",\n  \"partnerId\": \"\",\n  \"partnerName\": \"\",\n  \"creationDate\": \"\",\n  \"status\": \"DRAFT\",\n  \"source\": \"GENERATED\",\n  \"templateId\": \"\",\n  \"sourceDocumentId\": \"\",\n  \"lineItems\": [\n    {\n      \"productId\": \"\",\n      \"name\": \"\",\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"taxRatePercent\": 0,\n      \"vatCategoryCode\": \"\",\n      \"unitCode\": \"C62\",\n      \"exemptionReason\": \"\"\n    }\n  ],\n  \"taxBreakdown\": [\n    {\n      \"taxRatePercent\": 0,\n      \"netAmount\": 0,\n      \"taxAmount\": 0,\n      \"vatCategoryCode\": \"\",\n      \"exemptionReason\": \"\"\n    }\n  ],\n  \"netAmount\": 0,\n  \"taxAmount\": 0,\n  \"totalAmount\": 0,\n  \"currency\": \"\",\n  \"dueDate\": \"\",\n  \"deliveryDate\": \"\",\n  \"servicePeriod\": {\n    \"start\": \"\",\n    \"end\": \"\"\n  },\n  \"fileId\": \"\",\n  \"fileType\": \"\",\n  \"renderSourceFileId\": \"\",\n  \"paymentTermDays\": 0,\n  \"dateFormat\": \"DD.MM.YYYY\"\n}",
               "options": {
                 "raw": {
                   "language": "json"
